@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="com.pingan.jyc.cashier" version="1.0.0">
+    <name>jycCashierPlugin</name>
+    <js-module name="jycCashierPlugin" src="www/jycCashierPlugin.js">
+        <clobbers target="cordova.plugins.jycCashierPlugin"/>
+    </js-module>
+    <platform name="ios">
+        <config-file parent="/*" target="config.xml">
+            <feature name="jycCashierPlugin">
+                <param name="ios-package" value="jycCashierPlugin"/>
+            </feature>
+        </config-file>
+        <source-file src="src/ios/jycCashierPlugin.m"/>
+    </platform>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="jycCashierPlugin">
+                <param name="android-package" value="com.pingan.jyc.cashier.jycCashierPlugin"/>
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml"/>
+        <source-file src="src/android/jycCashierPlugin.java" target-dir="src/com/pingan/jyc/cashier/jycCashierPlugin"/>
+    </platform>
+</plugin>
