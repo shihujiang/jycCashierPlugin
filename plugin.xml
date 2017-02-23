@@ -12,6 +12,31 @@
             </feature>
         </config-file>
         <source-file src="src/ios/jycCashierPlugin.m"/>
+
+        <framework src="QuartzCore.framework"  />
+        <framework src="CFNetwork.framework"  />
+        <framework src="CoreMotion.framework"  />
+        <framework src="SystemConfiguration.framework"  />
+        <framework src="Security.framework"  />
+        <framework src="CoreText.framework"  />
+        <framework src="CoreTelephony.framework"  />
+        <framework src="CoreLocation.framework"  />
+        <framework src="libz.tbd"  />
+        <framework src="libc++.tbd"  />
+        <framework src="libsqlite3.0.tbd"  />
+        <framework src="src/ios/AlipaySDK.framework" custom="true" />
+
+        <source-file src="src/ios/libSYTPayKit.a" framework="true" />
+        <source-file src="src/ios/libWeChatSDK.a" framework="true" />
+        
+
+        <resource-file src="src/ios/AlipaySDK.bundle" />
+
+        <header-file src="src/ios/SYTViewController.h" />
+        <header-file src="src/ios/WechatAuthSDK.h" />
+        <header-file src="src/ios/WXApi.h" />
+        <header-file src="src/ios/WXApiObject.h" />
+        
     </platform>
     <platform name="android">
         <config-file parent="/*" target="res/xml/config.xml">
