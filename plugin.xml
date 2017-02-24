@@ -12,31 +12,25 @@
             </feature>
         </config-file>
         <source-file src="src/ios/jycCashierPlugin.m"/>
-
-        <framework src="QuartzCore.framework"  />
-        <framework src="CFNetwork.framework"  />
-        <framework src="CoreMotion.framework"  />
-        <framework src="SystemConfiguration.framework"  />
-        <framework src="Security.framework"  />
-        <framework src="CoreText.framework"  />
-        <framework src="CoreTelephony.framework"  />
-        <framework src="CoreLocation.framework"  />
-        <framework src="libz.tbd"  />
-        <framework src="libc++.tbd"  />
-        <framework src="libsqlite3.0.tbd"  />
-        <framework src="src/ios/AlipaySDK.framework" custom="true" />
-
-        <source-file src="src/ios/libSYTPayKit.a" framework="true" />
-        <source-file src="src/ios/libWeChatSDK.a" framework="true" />
-        
-
-        <resource-file src="src/ios/AlipaySDK.bundle" />
-
-        <header-file src="src/ios/SYTViewController.h" />
-        <header-file src="src/ios/WechatAuthSDK.h" />
-        <header-file src="src/ios/WXApi.h" />
-        <header-file src="src/ios/WXApiObject.h" />
-        
+        <framework src="QuartzCore.framework"/>
+        <framework src="CFNetwork.framework"/>
+        <framework src="CoreMotion.framework"/>
+        <framework src="SystemConfiguration.framework"/>
+        <framework src="Security.framework"/>
+        <framework src="CoreText.framework"/>
+        <framework src="CoreTelephony.framework"/>
+        <framework src="CoreLocation.framework"/>
+        <framework src="libz.tbd"/>
+        <framework src="libc++.tbd"/>
+        <framework src="libsqlite3.0.tbd"/>
+        <framework custom="true" src="src/ios/AlipaySDK.framework"/>
+        <source-file framework="true" src="src/ios/libSYTPayKit.a"/>
+        <source-file framework="true" src="src/ios/libWeChatSDK.a"/>
+        <resource-file src="src/ios/AlipaySDK.bundle"/>
+        <header-file src="src/ios/SYTViewController.h"/>
+        <header-file src="src/ios/WechatAuthSDK.h"/>
+        <header-file src="src/ios/WXApi.h"/>
+        <header-file src="src/ios/WXApiObject.h"/>
     </platform>
     <platform name="android">
         <config-file parent="/*" target="res/xml/config.xml">
@@ -45,6 +39,7 @@
             </feature>
         </config-file>
         <config-file parent="/*" target="AndroidManifest.xml"/>
-        <source-file src="src/android/jycCashierPlugin.java" target-dir="src/com/pingan/jyc/cashier/jycCashierPlugin"/>
+        <source-file src="src/android/jycCashierPlugin.java" target-dir="src/com/pingan/jyc/cashier"/>
+        <source-file src="src/android/libs/pingan-pay-1.0.0.aar" target-dir="libs" />
     </platform>
 </plugin>
