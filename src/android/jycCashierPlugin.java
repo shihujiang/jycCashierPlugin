@@ -32,7 +32,7 @@ public class jycCashierPlugin extends CordovaPlugin {
     private void coolMethod(String message, final CallbackContext callbackContext) {
         
         PayAPI api = PayAPI.getInstance();
-        api.startPaySDKForResult(this.cordova.getActivity(), "", 1, new CallBack() {
+        api.startPaySDKForResult(this.cordova.getActivity(), message, 1, new CallBack() {
             @Override
             public void success(String s) {
                 Log.d(tag,s);
