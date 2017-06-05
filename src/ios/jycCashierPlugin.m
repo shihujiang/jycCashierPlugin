@@ -30,8 +30,9 @@
     
     SYTViewController *controller = [[SYTViewController alloc] init];
     controller.delegate = self;
-    [controller initWithPreOrderUrl:@"https://test-api-syt-pama.pingan.com.cn/pama_cashier_web/test1.html"];
+//    [controller initWithPreOrderUrl:@"https://test-api-syt-pama.pingan.com.cn/pama_cashier_web/test1.html"];
 //    [controller initWithPreOrderUrl:@"https://m.baidu.com"];
+    [controller initWithPreOrderUrl:@"https://test-api-syt-pama.pingan.com.cn/pama_cashier_web/test1.html" Command:jsonString];
     [self.viewController presentViewController:controller  animated:YES completion:nil];
     
 }
