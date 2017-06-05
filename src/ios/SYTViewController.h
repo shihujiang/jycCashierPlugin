@@ -17,7 +17,7 @@
 @interface SYTViewController : UIViewController
 @property(nonatomic,weak)id<SYTViewControllerDelegate> delegate;
 
-- (void)initWithPreOrderUrl:(NSString *)url;
+- (void)initWithPreOrderUrl:(NSString *)url Command:(NSString *)command;
 
 @end
 
