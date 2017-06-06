@@ -15,24 +15,13 @@
 
 - (void)coolMethod:(CDVInvokedUrlCommand*)command
 {
-      command_ = command;
-//    CDVPluginResult* pluginResult = nil;
-//    NSString* echo = [command.arguments objectAtIndex:0];
-//
-//    if (echo != nil && [echo length] > 0) {
-//        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:echo];
-//    } else {
-//        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR];
-//    }
-//
-//    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
-    
+    command_ = command;
+    //NSLog(@"command111111111=%@",command_ .arguments[0]);
     
     SYTViewController *controller = [[SYTViewController alloc] init];
+    NSLog(@"controller=%@",controller);
     controller.delegate = self;
-//    [controller initWithPreOrderUrl:@"https://test-api-syt-pama.pingan.com.cn/pama_cashier_web/test1.html"];
-//    [controller initWithPreOrderUrl:@"https://m.baidu.com"];
-    [controller initWithPreOrderUrl:@"https://test-api-syt-pama.pingan.com.cn/pama_cashier_web/test1.html" Command:jsonString];
+    [controller initWithPreOrderUrl:@"https://test-api-syt-pama.pingan.com.cn/pama_cashier_web/index.html" Command:command_.arguments[0]];
     [self.viewController presentViewController:controller  animated:YES completion:nil];
     
 }
