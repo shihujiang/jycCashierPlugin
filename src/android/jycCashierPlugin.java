@@ -35,13 +35,13 @@ public class jycCashierPlugin extends CordovaPlugin {
         api.startPaySDKForResult(this.cordova.getActivity(), message, 1, new CallBack() {
             @Override
             public void success(String s) {
-                Log.d(tag,s);
+                //Log.d(tag,s);
                 callbackContext.success(s);
             }
             
             @Override
             public void fail(String s) {
-                Log.d(tag,s);
+                //Log.d(tag,s);
                 callbackContext.error("Expected one non-empty string argument.");
             }
         });
